@@ -1,18 +1,17 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import TodoPage from "./pages/TodoPage/TodoPage";
-import FollowersPage from "./pages/FollowersPage/FollowersPage";
 
 const App = () => {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<TodoPage />} />
-          <Route path="/followers" element={<FollowersPage />} />
+          <Route path="*" element={<div>Page not found! 404</div>} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 };

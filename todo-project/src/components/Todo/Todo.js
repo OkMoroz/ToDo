@@ -10,8 +10,14 @@ const Todo = () => {
   return (
     <div className="todo">
       <Header title="Todo" />
-      <AddInput setTodos={setTodos} todos={todos} />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <div className="todo-container">
+        <AddInput
+          setTodos={setTodos}
+          todos={todos} />
+        <TodoList
+          todos={todos}
+          setTodos={setTodos} />
+      </div>
     </div>
   );
 };

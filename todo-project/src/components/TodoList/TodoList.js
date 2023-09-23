@@ -2,6 +2,7 @@ import React from "react";
 import TodoFooter from "../TodoFooter/TodoFooter";
 import "./TodoList.css";
 
+
 const TodoList = ({ todos, setTodos }) => {
   const updateTask = (id) => {
     const updatedTasks = todos.map((todo) => {
